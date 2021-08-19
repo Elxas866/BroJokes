@@ -9,3 +9,24 @@ body {
     justify-content: center;
     font-size: 45px;
 }
+
+.postJokeBTN {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 20px 0px 0px;
+}
+
+.main {
+    margin: 100px 50px 0px 50px;
+}
+
+#joke {
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.postJoke {
+    margin: 50px;
+}
