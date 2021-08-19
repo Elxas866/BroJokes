@@ -25,10 +25,8 @@ body {
     font-size: 45px;
 }
 
-#postJokeBTN {
-    position: absolute;
-    top: 0;
-    right: 0;
+#postJokeBTNDiv {
+    text-align: end;
     margin: 20px 20px 0px 0px;
 }
 
