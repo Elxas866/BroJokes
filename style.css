@@ -2,6 +2,21 @@ body {
     background-color: white;
     margin: 0px;
     padding: 0px;
+    animation: onLoad 1s;
+}
+
+@keyframes onLoad {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+.PS {
+    animation: PS 0.5s;
+}
+
+@keyframes PS {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(0%);}
 }
 
 .header {
@@ -10,7 +25,7 @@ body {
     font-size: 45px;
 }
 
-.postJokeBTN {
+#postJokeBTN {
     position: absolute;
     top: 0;
     right: 0;
@@ -23,6 +38,8 @@ body {
 
 #joke {
     border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.226);
     padding: 20px;
     margin-bottom: 20px;
 }
