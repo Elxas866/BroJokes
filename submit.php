@@ -5,7 +5,7 @@ include('config/db_connect.php');
 
 //create variables
 $nickname = $_POST['nickname'];
-$joke = $POST['joke'];
+$joke = $_POST['joke'];
 
 $nickname = mysqli_real_escape_string($conn, $_POST['nickname']);
 $joke = mysqli_real_escape_string($conn, $_POST['joke']);
