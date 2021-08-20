@@ -12,14 +12,14 @@
 <body>
     <div class="PS">
         <h1 class="header">BroJokes</h1>
-        <form class="postJoke" action="index.html">
+        <form class="postJoke" method="POST" action="submit.php">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Your nickname</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="FlyingFish77">
+                <input name="nickname" type="text" class="form-control" id="exampleFormControlInput1" placeholder="FlyingFish77">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Your joke</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Knock knock..." rows="3"></textarea>
+                <textarea name="joke" class="form-control" id="exampleFormControlTextarea1" placeholder="Knock knock..." rows="3"></textarea>
             </div>
             <input type="submit">
         </form>
