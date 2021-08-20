@@ -17,7 +17,7 @@ $sql = "INSERT INTO jokes(nickname, joke) VALUES('$nickname', '$joke')";
 if(mysqli_query($conn, $sql)){
     //success
     //redirect to index page if done
-    header('Location: index.html');
+    header('Location: index.php');
 } else {
     //error
     echo 'query error: ' . mysqli_error($conn);

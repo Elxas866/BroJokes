@@ -13,8 +13,11 @@ $result = mysqli_query($conn, $sql);
 //fetch the resulting rows as an array
 $jokes = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-print_r($jokes);
+//free result from memory
+mysqli_free_result($result);
 
+//close connection
+mysqli_close($conn);
 
 
 ?>
@@ -37,25 +40,20 @@ print_r($jokes);
     </div>
     <h1 class="header">BroJokes</h1>
     <div class="main">
-        <div id="joke">
-            <h3>nickname</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex suscipit dicta excepturi impedit alias.</p>
-        </div>
-        <div id="joke">
-            <h3>nickname</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex suscipit dicta excepturi impedit alias.</p>
-        </div>
-        <div id="joke">
-            <h3>nickname</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex suscipit dicta excepturi impedit alias.</p>
-        </div>
-        <div id="joke">
-            <h3>nickname</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex suscipit dicta excepturi impedit alias.</p>
-        </div>
-        <div id="joke">
-            <h3>nickname</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex suscipit dicta excepturi impedit alias.</p>
+        <div class="row">
+
+        <?php foreach($jokes as $joke){ ?>
+
+            <div id="joke">
+                    <div class="card-content center">
+                        <h5><?php echo htmlspecialchars($joke['nickname']); ?></h5>
+                        <div><?php echo htmlspecialchars($joke['joke']);  ?></div>
+                    </div>
+            </div>
+
+        <?php } ?>
+
+
         </div>
     </div>
 </body>
