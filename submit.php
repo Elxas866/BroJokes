@@ -1,12 +1,24 @@
-<?php
+<?php	
 
-//opens a new file to write
-$data_file = fopen("jokes.txt", "w");
+//include connect file
+include('config/db_connect.php');
 
-$nickname = $_POST["nickname"];
-$joke = $_POST["joke"];
-$text_to_write = $nickname . " " . $joke;
+//create variables
+$nickname = $_POST['nickname'];
+$joke = $POST['joke'];
 
-//Write data to server side file
-fwrite($data_file, $text_to_write);
-fclose($data_file);
+$nickname = mysqli_real_escape_string($conn, $_POST['nickname']);
+$joke = mysqli_real_escape_string($conn, $_POST['joke']);
+
+//crate sql
+$sql = "INSERT INTO jokes(nickname, joke) VALUES('$nickname', '$joke')";
+
+//save to db
+if(mysqli_query($conn, $sql)){
+    //success
+    //redirect to index page if done
+    header('Location: index.html');
+} else {
+    //error
+    echo 'query error: ' . mysqli_error($conn);
+}

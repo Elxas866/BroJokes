@@ -1,3 +1,25 @@
+<?php
+
+//include connect file
+include('config/db_connect.php');
+
+
+//write query for all jokes
+$sql = 'SELECT nickname, joke FROM jokes';
+
+//make query & get result
+$result = mysqli_query($conn, $sql);
+
+//fetch the resulting rows as an array
+$jokes = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+print_r($jokes);
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
