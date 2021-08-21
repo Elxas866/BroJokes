@@ -3,6 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
     animation: onLoad 1s;
+    scroll-behavior: smooth;
 }
 
 @keyframes onLoad {
@@ -48,4 +49,15 @@ body {
 
 .postJoke {
     margin: 50px;
+}
+
+.godown {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#arrowDown {
+    width: 10%;
+    height: auto;
 }

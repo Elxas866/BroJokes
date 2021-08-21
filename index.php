@@ -42,19 +42,23 @@ mysqli_close($conn);
     <div class="main">
         <div class="row">
 
-        <?php foreach($jokes as $joke){ ?>
+            <?php foreach($jokes as $joke){ ?>
 
-            <div id="joke">
-                    <div class="card-content center">
-                        <h5><?php echo htmlspecialchars($joke['nickname']); ?></h5>
-                        <div><?php echo htmlspecialchars($joke['joke']);  ?></div>
-                    </div>
-            </div>
+                <div id="joke">
+                        <div class="card-content center">
+                            <h5><?php echo htmlspecialchars($joke['nickname']); ?></h5>
+                            <div><?php echo htmlspecialchars($joke['joke']);  ?></div>
+                        </div>
+                </div>
 
-        <?php } ?>
+            <?php } ?>
 
 
         </div>
     </div>
+    <div class="godown">
+        <a href="#newest"><img id="arrowDown" src="./assets/arrow_down.png" alt="arow down"></a>
+    </div>
+    <div id="newest"></div>
 </body>
 </html>
