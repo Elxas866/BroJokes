@@ -6,6 +6,11 @@ body {
     scroll-behavior: smooth;
 }
 
+.dark-mode {
+    background-color: rgb(97, 97, 97);
+    color: rgb(219, 219, 219);
+}
+
 @keyframes onLoad {
     0% {opacity: 0;}
     100% {opacity: 100;}
@@ -24,15 +29,31 @@ body {
     display: flex;
     justify-content: center;
     font-size: 45px;
+    margin-top: 10%;
 }
 
-#postJokeBTNDiv {
-    text-align: end;
-    margin: 20px 20px 0px 0px;
+.logo {
+    font-family: 'Mulish', sans-serif;
+}
+
+#Button {
+    border-radius: 5px;
+}
+
+.topButtons {
+    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
+    padding: 20px 20px 20px 20px;
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .main {
-    margin: 100px 50px 0px 50px;
+    margin: 80px 50px 0px 50px;
 }
 
 #joke {
@@ -60,4 +81,18 @@ body {
 #arrowDown {
     width: 10%;
     height: auto;
+}
+
+@media all and (max-width: 600px) {
+    #arrowDown {
+        width: 20%;
+        height: auto;
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        font-size: 45px;
+        margin-top: 25%;
+    }
 }

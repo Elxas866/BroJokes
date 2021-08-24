@@ -27,17 +27,28 @@ mysqli_close($conn);
 <html lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BroJokes</title>
 </head>
 <body>
-    <div id="postJokeBTNDiv">
-        <button id="postJokeBTN" onclick="postJoke()">Post your joke</button>
+
+    <div class="topButtons">
+        <div>
+            <button id="Button" onclick="ToggleDarkmode()">Dark/Light</button>
+        </div>
+        <h4 class="logo">BJ</h4>
+        <div>
+            <button id="Button" onclick="postJoke()">Post your joke</button>
+        </div>
     </div>
+
+    
     <h1 class="header">BroJokes</h1>
     <div class="main">
         <div class="row">
@@ -60,5 +71,8 @@ mysqli_close($conn);
         <a href="#newest"><img id="arrowDown" src="./assets/arrow_down.png" alt="arow down"></a>
     </div>
     <div id="newest"></div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
