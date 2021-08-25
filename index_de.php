@@ -5,7 +5,7 @@ include('config/db_connect.php');
 
 
 //write query for all jokes
-$sql = 'SELECT nickname, joke FROM jokes';
+$sql = 'SELECT nickname, joke FROM jokes_de';
 
 //make query & get result
 $result = mysqli_query($conn, $sql);
@@ -40,17 +40,17 @@ mysqli_close($conn);
 
     <div class="topButtons">
         <div>
-            <button id="Button" onclick="ToggleDarkmode()">Dark/Light</button>
+            <button id="Button" onclick="ToggleDarkmode()">Dunkel/Hell</button>
         </div>
         <h4 class="logo">BJ</h4>
         <div>
-            <button id="Button" onclick="postJoke()">Post your joke</button>
+            <button id="Button" onclick="postJoke_de()">Poste deinen Witz</button>
         </div>
     </div>
 
     
     <h1 class="header">BroJokes</h1>
-    <div id="swichsiteDIV"><button id="Button" onclick="gotogerman()">Go to german site</button></div>
+    <div id="swichsiteDIV"><button id="Button" onclick="gotoenglish()">Gehe zur Englischen Seite</button></div>
     <div class="main">
         <div class="row">
 

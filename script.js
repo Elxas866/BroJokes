@@ -38,3 +38,15 @@ function ToggleDarkmode() {
 function postJoke() {
     window.open("postJoke.html","_self");
 }
+
+function postJoke_de() {
+    window.open("postJoke_de.html","_self");
+}
+
+function gotogerman() {
+    window.open("index_de.php");
+}
+
+function gotoenglish() {
+    window.open("index.php");
+}
