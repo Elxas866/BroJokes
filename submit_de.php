@@ -5,7 +5,7 @@ include('config/db_connect.php');
 
 //check if there
 if(empty($_POST['nickname']) or empty($_POST['joke'])) {
-    echo 'Please fill out all fields';
+    echo 'Bitte fülle alles aus!';
 } else {
     //create variables
     $nickname = $_POST['nickname'];
