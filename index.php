@@ -31,6 +31,7 @@ mysqli_close($conn);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"> 
     <link href="style.css?<?=filemtime("style.css")?>" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
