@@ -44,9 +44,9 @@ function postJoke_de() {
 }
 
 function gotogerman() {
-    window.open("index_de.php");
+    window.open("index_de.php", "_self");
 }
 
 function gotoenglish() {
-    window.open("index.php");
+    window.open("index.php", "_self");
 }
